@@ -389,19 +389,19 @@
 // IP Validation
 ////////////////////////////
 
-function isValidIP(str) {
-  const octets = str.split('.')               // Split into octets
-
-  return (octets.length === 4) &&             // Ensure str has exactly 4 octets
-    octets.reduce((acc, octet) =>             // Check all octets
-      (acc === true) &&                       // Ensure prior octets okay
-      (String(Number(octet)) === octet) &&    // Ensure octet has no spaces or leading 0's, ...
-      (Number(octet) >= 0) &&                 // Ensure octet is 0 or more
-      (Number(octet) <= 255)                  // Ensure octet is 255 or less
-    , true)
-}
-
-console.log(isValidIP('123.045.067.089'));
+// function isValidIP(str) {
+//   const octets = str.split('.')               // Split into octets
+//
+//   return (octets.length === 4) &&             // Ensure str has exactly 4 octets
+//     octets.reduce((acc, octet) =>             // Check all octets
+//       (acc === true) &&                       // Ensure prior octets okay
+//       (String(Number(octet)) === octet) &&    // Ensure octet has no spaces or leading 0's, ...
+//       (Number(octet) >= 0) &&                 // Ensure octet is 0 or more
+//       (Number(octet) <= 255)                  // Ensure octet is 255 or less
+//     , true)
+// }
+//
+// console.log(isValidIP('123.045.067.089'));
 
 // True:
 // 1.2.3.4
@@ -412,3 +412,26 @@ console.log(isValidIP('123.045.067.089'));
 // 1.2.3.4.5
 // 123.456.78.90
 // 123.045.067.089
+
+
+////////////////////////////
+// Vowel Words
+////////////////////////////
+
+// let words = ['jon', 'ada', 'ppzpp', 'brgggg', 'eric', 'zeke', 'phil', 'ngmn']
+//
+// function hasVowels(words) {
+//   let vowels = ['a', 'e', 'i', 'o', 'u']
+//   const vowelWords = [];
+//   for(let i = 0; i < words.length; i++){
+//     for(let j = 0; j < vowels.length; j++){
+//       if(words[i].includes(vowels[j])){
+//         vowelWords.push(words[i])
+//         break;
+//       }
+//     }
+//   }
+//   return vowelWords
+// }
+//
+// console.log(hasVowels(words));

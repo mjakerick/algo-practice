@@ -437,8 +437,13 @@
 // console.log(hasVowels(words));
 
 
+///////////////////////////////////////////////////////////////////////////
+// Started the LeetCode grind
+///////////////////////////////////////////////////////////////////////////
+
+
 ////////////////////////////
-// Two Sum
+// 1. Two Sum
 ////////////////////////////
 
 // // We want to return the position of the two numbers whose sum is equivalent to the target
@@ -457,3 +462,20 @@
 // }
 //
 // console.log(twoSum([2, 7, 11, 15], 9));
+
+
+////////////////////////////
+// 9. Palindrome Number
+////////////////////////////
+
+// function isPalindrome(x) {
+//   // Can use "* Math.sign(x)" to handle negative numbers as numbers instead of strings, which keeps the negative sign at the front of the number instead of at the end
+//   reverse = parseFloat(x.toString().split('').reverse().join('')) //* Math.sign(x)
+//   if (x == reverse){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// };
+//
+// console.log(isPalindrome(213));

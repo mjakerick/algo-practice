@@ -549,23 +549,37 @@
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lowercase English letters.
 
-function longestCommonPrefix(strs) {
+// function longestCommonPrefix(strs) {
+//
+//   let answer = "";
+//
+//   if (strs == null || strs.length == 0) {
+//     return answer;
+//   }
+//
+//   let minimumLength = strs[0].length;
+//
+//   for (let i = 1; i < strs.length; i++) {
+//     minimumLength = Math.min(minimumLength, strs[i].length);
+//   }
+//
+//   for (i = 0; i < minimumLength; i++) {
+//
+//     let letter = strs[0][i]
+//
+//     for (j = 0; j < strs.length; j++) {
+//       if (strs[j][i] != letter) {
+//         return answer
+//       }
+//     }
+//     answer += letter;
+//   }
+//   return answer;
+// };
+//
+// console.log(longestCommonPrefix(["flower","flow","flight"]));
 
-let answer = "";
 
-  for (i = 0; i < strs[i].length; i++) {
-
-    let letter = strs[0][i]
-
-    for (j = 0; j < strs.length; j++) {
-      if (strs[j][i] != letter) {
-        return answer
-
-      }
-    }
-    answer += letter;
-  }
-  return answer
-};
-
-console.log(longestCommonPrefix(["dog","racecar","car"]));
+////////////////////////////
+// 20. Valid Parentheses
+////////////////////////////

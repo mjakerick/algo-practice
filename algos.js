@@ -607,27 +607,83 @@
 // 1 <= s.length <= 104
 // s consists of parentheses only '()[]{}'
 
-function isValid(s) {
-  const stack = [];
+// function isValid(s) {
+//   const stack = [];
+//
+//   for (let i = 0; i < s.length; i++) {
+//
+//     const top = stack[stack.length - 1];
+//
+//     if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
+//       stack.push(s[i]);
+//     } else if (s[i] === ')' && top === '(' && stack.length !== 0) {
+//       stack.pop();
+//     } else if (s[i] === ']' && top === '[' && stack.length !== 0) {
+//       stack.pop();
+//     } else if (s[i] === '}' && top === '{' && stack.length !== 0) {
+//       stack.pop();
+//     } else {
+//       return false;
+//     }
+//     console.log(stack);
+//   }
+//
+//   return stack.length === 0;
+// };
+//
+// console.log(isValid("()[{(({}){[]})}]"));
 
-  for (let i = 0; i < s.length; i++) {
 
-    const top = stack[stack.length - 1];
+////////////////////////////
+// 21. Merge Two Sorted Lists
+////////////////////////////
 
-    if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
-      stack.push(s[i]);
-    } else if (s[i] === ')' && top === '(' && stack.length !== 0) {
-      stack.pop();
-    } else if (s[i] === ']' && top === '[' && stack.length !== 0) {
-      stack.pop();
-    } else if (s[i] === '}' && top === '{' && stack.length !== 0) {
-      stack.pop();
-    } else {
-      return false;
-    }
-  }
+// NEED MORE UNDERSTANDING OF LINKED LISTS
 
-  return stack.length === 0;
-};
-
-console.log(isValid("[(])"));
+// var n3 = new ListNode(4, null);
+// var n2 = new ListNode(2, n3);
+// var n1 = new ListNode(1, n2);
+// var list1 = n1;
+//
+// var n6 = new ListNode(4, null);
+// var n5 = new ListNode(3, n6);
+// var n4 = new ListNode(1, n5);
+// var list2 = n4;
+//
+// function ListNode(val, next) {
+//   this.val = (val===undefined ? 0 : val)
+//   this.next = (val===undefined ? null : next)
+// }
+//
+// function mergeTwoLists(list1, list2) {
+//
+//   let dummyHead = new ListNode();
+//   let tail = dummyHead;
+//   let curr1 = list1;
+//   let curr2 = list2;
+//
+//   while(curr1 !== null && curr2 !== null){
+//
+//     if(curr1.val < curr2.val){
+//       tail.next = curr1;
+//       curr1 = curr1.next;
+//     } else {
+//       tail.next = curr2;
+//       curr2 = curr2.next;
+//     }
+//
+//     tail = tail.next;
+//   }
+//
+//   if(curr1 !== null) {
+//     tail.next = curr1;
+//   }
+//
+//   if(curr2 !== null){
+//     tail.next = curr2;
+//   }
+//
+//   return dummyHead.next;
+// }
+//
+// console.log(mergeTwoLists(list1, list2));

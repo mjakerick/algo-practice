@@ -687,3 +687,41 @@
 // }
 //
 // console.log(mergeTwoLists(list1, list2));
+
+
+////////////////////////////
+// 26. Remove Duplicates from Sorted Array
+////////////////////////////
+
+// My answer, works local :p ... isn't working for LeetCode :(
+// function removeDuplicates(nums) {
+//
+//   let k = 0;
+//
+//   for(i = 0; i < nums.length; i++) {
+//     if(nums[i] !== nums[i + 1] && nums[i] !== nums[i - 1]){
+//
+//     } else {
+//       nums.splice(i, 1);
+//       k++;
+//     }
+//   }
+//   return {nums, k}
+// }
+//
+// console.log(removeDuplicates([1,1,2]));
+
+// New answer with research ... works LeetCode poggers :D
+function removeDuplicates(nums){
+  let startingIndex = 0
+
+  for(secondIndex = 1; secondIndex < nums.length; secondIndex++){
+    if(nums[startingIndex] != nums[secondIndex]){
+      startingIndex++
+      nums[startingIndex] = nums[secondIndex]
+    }
+  }
+  return startingIndex + 1
+};
+
+console.log(removeDuplicates([1,1,2]));

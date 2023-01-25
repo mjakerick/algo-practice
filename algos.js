@@ -693,7 +693,7 @@
 // 26. Remove Duplicates from Sorted Array
 ////////////////////////////
 
-// My answer, works local :p ... isn't working for LeetCode :(
+// // My answer, works local :p ... isn't working for LeetCode :(
 // function removeDuplicates(nums) {
 //
 //   let k = 0;
@@ -711,17 +711,40 @@
 //
 // console.log(removeDuplicates([1,1,2]));
 
-// New answer with research ... works LeetCode poggers :D
-function removeDuplicates(nums){
-  let startingIndex = 0
+// // New answer with research ... works LeetCode poggers :D
+// function removeDuplicates(nums){
+//   let startingIndex = 0
+//
+//   for(secondIndex = 1; secondIndex < nums.length; secondIndex++){
+//     if(nums[startingIndex] != nums[secondIndex]){
+//       startingIndex++
+//       nums[startingIndex] = nums[secondIndex]
+//     }
+//   }
+//   return startingIndex + 1
+// };
+//
+// console.log(removeDuplicates([1,1,2]));
 
-  for(secondIndex = 1; secondIndex < nums.length; secondIndex++){
-    if(nums[startingIndex] != nums[secondIndex]){
-      startingIndex++
-      nums[startingIndex] = nums[secondIndex]
+
+////////////////////////////
+// 27. Remove Element
+////////////////////////////
+
+function removeElement(nums, val) {
+  let k = 0;
+  // Iterates over array
+  for (i = 0; i < nums.length; i++) {
+    // If current element in arr does not equal the val, change it's position to k
+    // If it does, leave it
+    // This moves relevant value to the front, and items to be removed to the end of the arr
+    if (nums[i] !== val) {
+      nums[k++] = nums[i];
     }
   }
-  return startingIndex + 1
+  // We then cut the nums arr length to equal k, which removes elements from nums that are equal to val
+  nums.length = k;
+  return k;
 };
 
-console.log(removeDuplicates([1,1,2]));
+console.log(removeElement([3,2,2,3], val = 3));

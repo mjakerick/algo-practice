@@ -731,20 +731,43 @@
 // 27. Remove Element
 ////////////////////////////
 
-function removeElement(nums, val) {
-  let k = 0;
-  // Iterates over array
-  for (i = 0; i < nums.length; i++) {
-    // If current element in arr does not equal the val, change it's position to k
-    // If it does, leave it
-    // This moves relevant value to the front, and items to be removed to the end of the arr
-    if (nums[i] !== val) {
-      nums[k++] = nums[i];
-    }
-  }
-  // We then cut the nums arr length to equal k, which removes elements from nums that are equal to val
-  nums.length = k;
-  return k;
-};
+// function removeElement(nums, val) {
+//   let k = 0;
+//   // Iterates over array
+//   for (i = 0; i < nums.length; i++) {
+//     // If current element in arr does not equal the val, change it's position to k
+//     // If it does, leave it
+//     // This moves relevant value to the front, and items to be removed to the end of the arr
+//     if (nums[i] !== val) {
+//       nums[k++] = nums[i];
+//     }
+//   }
+//   // We then cut the nums arr length to equal k, which removes elements from nums that are equal to val
+//   nums.length = k;
+//   return k;
+// };
+//
+// console.log(removeElement([3,2,2,3], val = 3));
 
-console.log(removeElement([3,2,2,3], val = 3));
+
+////////////////////////////
+// 35. Search Insert Position
+////////////////////////////
+
+// Happy that I solved this without looking up any syntax or hints :)
+
+// function searchInsert(nums, target) {
+//   for (i = 0; i < nums.length; i++) {
+//     if (target < nums[0]) {
+//       return 0;
+//     } else if (nums[i] === target){
+//       return i;
+//     } else if (nums[i+1] === undefined){
+//       return i + 1;
+//     } else if (nums[i] !== target && target > nums[i] && target < nums[i+1]) {
+//       return i + 1;
+//     }
+//   }
+// }
+//
+// console.log(searchInsert([2,5], 1));

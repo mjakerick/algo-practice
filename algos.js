@@ -465,6 +465,15 @@
 
 
 ////////////////////////////
+// 3. Longest Substring Without Repeating Characters
+////////////////////////////
+
+function lengthOfLongestSubstring(s) {
+
+}
+
+
+////////////////////////////
 // 9. Palindrome Number
 ////////////////////////////
 
@@ -771,3 +780,55 @@
 // }
 //
 // console.log(searchInsert([2,5], 1));
+
+
+////////////////////////////
+// FIZZ BUZZ BAZZ
+////////////////////////////
+
+// loop through 1 - 105
+// return FIZZ for number divisible by 3
+// return BUZZ for numbers divisible by 5
+// return BAZZ for numbers divisible by 7
+// return the number for any that are not divisible by 3, 5, and/or 7
+
+// function fizzBuzzBazz() {
+//   for (i = 1; i <= 105; i++) {
+//     if (i % 3 === 0) {
+//       console.log('FIZZ');
+//     }
+//     if (i % 5 === 0) {
+//       console.log('BUZZ');
+//     }
+//     if (i % 7 === 0) {
+//       console.log('BAZZ');
+//     }
+//     else {
+//       console.log(i);
+//     }
+//   }
+// }
+//
+// fizzBuzzBazz();
+
+// Better solution:
+
+// function fizzBuzzBazz() {
+//   for (i = 1; i <= 105; i++) {
+//
+//     let out = "";
+//
+//     if (i % 3 === 0) {
+//       out += "FIZZ";
+//     }
+//     if (i % 5 === 0) {
+//       out += "BUZZ";
+//     }
+//     if (i % 7 === 0) {
+//       out += "BAZZ";
+//     }
+//     console.log(out || i);
+//   }
+// }
+//
+// fizzBuzzBazz();

@@ -832,3 +832,35 @@ function lengthOfLongestSubstring(s) {
 // }
 //
 // fizzBuzzBazz();
+
+
+////////////////////////////
+// 3. Longest Substring Without Repeating Characters
+////////////////////////////
+
+// function lengthOfLongestSubstring(s) {
+//
+//   let currentStr = [];
+//   let longestStrLength = 0;
+//
+//   for (i = 0; i < s.length; i++) {
+//     const currentCharPosition = currentStr.indexOf(s[i]);
+//
+//     if (currentCharPosition !== -1) {
+//       currentStr.splice(0, currentCharPosition + 1);
+//     }
+//
+//     currentStr.push(s[i]);
+//
+//     longestStrLength = Math.max(
+//       longestStrLength,
+//       currentStr.length
+//     );
+//     console.log(currentStr);
+//     console.log(currentStr.length);
+//     console.log(longestStrLength);
+//   }
+//   return longestStrLength;
+// }
+//
+// console.log(lengthOfLongestSubstring("abcabcbb"));

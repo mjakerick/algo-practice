@@ -889,3 +889,35 @@ function lengthOfLongestSubstring(s) {
 // }
 
 // console.log(lengthOfLastWord("   fly me   to   the moon  "));
+
+
+////////////////////////////
+// 1394. Find Lucky Integer in an Array
+////////////////////////////
+
+// function findLucky(arr) {
+//
+//     let lucky = [-1];
+//     let numObj = {};
+//
+//     for (num of arr) {
+//       numObj[num] ? numObj[num] += 1 : numObj[num] = 1;
+//     }
+//
+//     let nums = Object.keys(numObj);
+//     let frequencies = Object.values(numObj);
+//
+//     for (let num in nums) {
+//       if (nums[num] == frequencies[num]) {
+//         lucky.push(frequencies[num]);
+//       }
+//     }
+//
+//     if (lucky.length === 1) {
+//       return lucky;
+//     } else {
+//       return Math.max(...lucky);
+//     }
+// };
+//
+// console.log(findLucky([2,2,2,3,3]));

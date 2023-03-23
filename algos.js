@@ -864,3 +864,28 @@ function lengthOfLongestSubstring(s) {
 // }
 //
 // console.log(lengthOfLongestSubstring("abcabcbb"));
+
+
+////////////////////////////
+// 58. Length of Last Word
+////////////////////////////
+
+// function lengthOfLastWord(s) {
+//   const newArr = s.split(" ")
+
+//   let allWords = [];
+
+//   for(j = 0; j < newArr.length; j++) {
+//     if (newArr[j] !== "") {
+//       allWords.push(newArr[j]);
+//     }
+//   }
+
+//   const i = (allWords.length - 1);
+
+//   const lastWord = allWords[i];
+
+//   return lastWord.length;
+// }
+
+// console.log(lengthOfLastWord("   fly me   to   the moon  "));

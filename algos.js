@@ -921,3 +921,14 @@ function lengthOfLongestSubstring(s) {
 // };
 //
 // console.log(findLucky([2,2,2,3,3]));
+
+
+////////////////////////////
+// 28. Find the Index of the First Occurrence in a String
+////////////////////////////
+
+function strStr(haystack, needle) {
+  let ans = -1;
+
+
+}

@@ -967,19 +967,86 @@ function lengthOfLongestSubstring(s) {
 // 66. Plus One
 ////////////////////////////
 
-function plusOne(digits) {
+// function plusOne(digits) {
+//
+//   for(i = digits.length - 1; i >= 0; i--){
+//     if(digits[i] < 9){
+//       digits[i] = digits[i] + 1;
+//       return digits;
+//     } else {
+//       digits[i] = 0;
+//     }
+//   }
+//
+//   digits.unshift(1); // handles number like 99 by unshifting 1 so we dont return 00
+//   return digits;
+// };
+//
+// plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]);
 
-  for(i = digits.length - 1; i >= 0; i--){
-    if(digits[i] < 9){
-      digits[i] = digits[i] + 1;
-      return digits;
-    } else {
-      digits[i] = 0;
-    }
-  }
 
-  digits.unshift(1);
-  return digits;
-};
+////////////////////////////
+// 67. Add Binary
+////////////////////////////
 
-plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]);
+// my code, didn't know binary before this
+// internet says binary for 12 = 1100
+// internet says binary for 2021 = 1111100101
+
+// function addBinary(a, b) {
+//   let num = Number(a) + Number(b);
+//
+//   let quotient = [num];
+//   let remainder = [];
+//   let ans = [];
+//
+//   while(quotient > 1.5){
+//     if((quotient % 2) != 0) {
+//       remainder.push(1);
+//     } else {
+//       remainder.push(quotient % 2);
+//     }
+//     quotient.push(quotient / 2 | 0);
+//     quotient.shift();
+//   }
+//   for(i = remainder.length - 1; i >= 0; i--){
+//     ans.push(remainder[i]);
+//   }
+//   ans.unshift(1);
+//   return ans.join('');
+// }
+//
+// console.log(addBinary("11", "1"));
+
+// Leetcode solution:
+// I don't understand how 12 = 100
+// I don't understand how 2021 = 10101
+
+// let addBinary = (a, b) => {
+//   // Truth Table
+//   // 1st + 2nd + carry = sum, new carry, decimal sum
+//   //   0 +  0  + 0 = 0, 0 (0)
+//   //   0 +  0  + 1 = 1, 0 (1)
+//   //   0 +  1  + 1 = 0, 1 (2)
+//   //   1 +  1  + 1 = 1, 1 (3)
+//
+//   let carry = 0;
+//   let result = '';
+//
+//   let len1 = a.length - 1;
+//   let len2 = b.length - 1;
+//
+//   for (; len1 >= 0 || len2 >= 0 || carry > 0; len1--, len2--) {
+//     let sum = (+a[len1] || 0) + (+b[len2] || 0) + carry;
+//     if (sum > 1) {
+//       sum = sum % 2;
+//       carry = 1;
+//     } else {
+//       carry = 0;
+//     }
+//     result = `${sum}${result}`;
+//   }
+//   return result;
+// };
+//
+// console.log(addBinary("11", "1"));

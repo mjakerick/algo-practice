@@ -64,5 +64,34 @@
 
 
 //////////////////////////////////
-// 4. //
+// 4. // 238. Product of Array Except Self
+//////////////////////////////////
+
+// function productExceptSelf(nums) {
+//   let prefix = [];
+//   for(i = 0; i < nums.length; i++) {
+//     if(nums[i-1] === undefined) {
+//       prefix[i] = nums[i];
+//     } else {
+//       prefix[i] = prefix[i-1] *nums[i];
+//     }
+//   }
+//   let postfix = 1;
+//   for(i = nums.length - 1; i >= 0; i--) {
+//     if(nums[i+1] === undefined) {
+//       prefix[i] = prefix[i-1];
+//       postfix = nums[i];
+//     } else {
+//       prefix[i] = (prefix[i-1] === undefined ? 1: prefix[i-1]) * postfix;
+//       postfix = postfix * nums[i];
+//     }
+//   }
+//   return prefix;
+// }
+//
+// console.log(productExceptSelf([1,2,3,4]));
+
+
+//////////////////////////////////
+// 5. // 
 //////////////////////////////////

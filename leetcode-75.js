@@ -93,5 +93,26 @@
 
 
 //////////////////////////////////
-// 5. // 
+// 5. // 53. Maximum Subarray
 //////////////////////////////////
+
+  // function maxSubArray(nums) {
+  //   let maxSub = nums[0];
+  //   let curSum = 0;
+  //
+  //   for(i = 0; i < nums.length; i++) {
+  //     if(curSum < 0) {
+  //       curSum = 0;
+  //     }
+  //     curSum += nums[i];
+  //     maxSub = Math.max(maxSub, curSum);
+  //   }
+  //   return maxSub;
+  // }
+  //
+  // console.log(maxSubArray([5,4,-1,7,8]));
+
+
+  //////////////////////////////////
+  // 6. //
+  //////////////////////////////////

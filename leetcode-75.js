@@ -96,23 +96,49 @@
 // 5. // 53. Maximum Subarray
 //////////////////////////////////
 
-  // function maxSubArray(nums) {
-  //   let maxSub = nums[0];
-  //   let curSum = 0;
-  //
-  //   for(i = 0; i < nums.length; i++) {
-  //     if(curSum < 0) {
-  //       curSum = 0;
-  //     }
-  //     curSum += nums[i];
-  //     maxSub = Math.max(maxSub, curSum);
-  //   }
-  //   return maxSub;
-  // }
-  //
-  // console.log(maxSubArray([5,4,-1,7,8]));
+// function maxSubArray(nums) {
+//   let maxSub = nums[0];
+//   let curSum = 0;
+//
+//   for(i = 0; i < nums.length; i++) {
+//     if(curSum < 0) {
+//       curSum = 0;
+//     }
+//     curSum += nums[i];
+//     maxSub = Math.max(maxSub, curSum);
+//   }
+//   return maxSub;
+// }
+//
+// console.log(maxSubArray([5,4,-1,7,8]));
 
 
-  //////////////////////////////////
-  // 6. //
-  //////////////////////////////////
+//////////////////////////////////
+// 6. // 152. Maximum Product Subarray
+//////////////////////////////////
+
+// function maxProduct(nums) {
+//   let result = Math.max.apply(Math, nums);
+//
+//   let curMin = 1;
+//   let curMax = 1;
+//
+//   for(i = 0; i < nums.length; i++) {
+//     if(nums[i] == 0) {
+//       curMin = 1;
+//       curMax = 1;
+//     }
+//     let temp = curMax * nums[i];
+//     curMax = Math.max(nums[i] * curMax, nums[i] * curMin, nums[i]);
+//     curMin = Math.min(temp, nums[i] * curMin, nums[i]);
+//     result = Math.max(result, curMax, curMin);
+//   }
+//   return result;
+// }
+//
+// console.log(maxProduct([-2,0,-1]));
+
+
+//////////////////////////////////
+// 7. // 
+//////////////////////////////////

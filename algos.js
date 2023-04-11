@@ -995,6 +995,8 @@ let finishThisProblem = "come back to finish this problem"
 // internet says binary for 12 = 1100
 // internet says binary for 2021 = 1111100101
 
+// Oh, I didn't realize the given numbers were binary... oops
+
 // function addBinary(a, b) {
 //   let num = Number(a) + Number(b);
 //

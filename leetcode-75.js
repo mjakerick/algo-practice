@@ -140,5 +140,33 @@
 
 
 //////////////////////////////////
-// 7. // 
+// 7. // 153. Find Minimum in Rotated Sorted Array
+//////////////////////////////////
+
+// function findMin(nums) {
+//   let result = nums[0];
+//   let left = 0;
+//   let right = nums.length - 1;
+//
+//   while(left <= right) {
+//     if(nums[left] < nums[right]) {
+//       result = Math.min(result, nums[left]);
+//       break;
+//     }
+//     let mid = Math.floor((left + right) / 2);
+//     result = Math.min(result, nums[mid]);
+//     if(nums[mid] >= nums[left]) {
+//       left = mid + 1;
+//     } else {
+//       right = mid - 1;
+//     }
+//   }
+//   return result;
+// }
+//
+// console.log(findMin([11,13,15,17]));
+
+
+//////////////////////////////////
+// 8. // 33. Search in Rotated Sorted Array
 //////////////////////////////////

@@ -1,3 +1,7 @@
+# # # # # # # # # #
+# VARIABLES
+# # # # # # # # # #
+
 # # Variables are given their type dynamically
 # n = 0
 # print('n =', n)
@@ -5,7 +9,6 @@
 # # changed type from int to str
 # n = "abc"
 # print('n =', n)
-
 
 # # Multiple assignments
 # n, m = 0, "abc"
@@ -23,6 +26,11 @@
 # n = 4
 # n = None
 # print("n =", n)
+
+
+# # # # # # # # # #
+# IF-STATEMENTS
+# # # # # # # # # #
 
 # # If statements don't need parentheses or curly braces
 # n = 1
@@ -43,8 +51,7 @@
 #     n += 1
 # print('n =', n, 'm =', m)
 
-nums = [-1,0,1,2,-1,-4]
 
-nums.sort()
-
-print(nums)
+# # # # # # # # # #
+# LOOPS
+# # # # # # # # # #

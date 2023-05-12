@@ -46,6 +46,7 @@
 # else:
 #     n += 2
 # print('n =', n)
+# # result is "n = 3"
 
 # # Parentheses needed for multi-line conditions
 # #  and = &&
@@ -55,6 +56,7 @@
 #     n != m) or n == m):
 #     n += 1
 # print('n =', n, 'm =', m)
+# # result is "n = 1 m = 2"
 
 
 # # # # # # # # # #

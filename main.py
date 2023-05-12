@@ -5,17 +5,21 @@
 # # Variables are given their type dynamically
 # n = 0
 # print('n =', n)
+# # result is "n = 0"
 
 # # changed type from int to str
 # n = "abc"
 # print('n =', n)
+# # result is "n = abc"
 
 # # Multiple assignments
 # n, m = 0, "abc"
 # print('n =', n, 'm =', m)
+# # result is "n = 0 m = abc"
 
 # n, m, z = 0.125, "abc", False
 # print('n =', n, 'm =', m, 'z =', z)
+# # result is "n = 0.125 m = abc z = false"
 
 # # Increment
 # n = n + 1 # good

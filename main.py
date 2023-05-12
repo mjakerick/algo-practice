@@ -30,6 +30,7 @@
 # n = 4
 # n = None
 # print("n =", n)
+# # result is "n = None"
 
 
 # # # # # # # # # #

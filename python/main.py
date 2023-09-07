@@ -278,7 +278,10 @@
 # # 1 2 3
 
 # # Be careful though
-# # a, b = [1, 2, 3]
+# a, b = [1, 2, 3]
+# print(a)
+# # result is
+# # ValueError: too many values to unpack (expected 2)
 
 # # Loop through arrays
 # nums = [1, 2, 3]
@@ -364,3 +367,48 @@
 
 # # This won't work
 # # arr = [[0] * 4] * 4
+
+# # # # # # # # # #
+# STRINGS
+# # # # # # # # # #
+
+# # Strings are similar to arrays
+# s = "abc"
+# print(s[0:2])
+# # result is
+# # ab
+
+# # But they are immutable
+# s[0] = "A"
+# print(s[0])
+# # result is
+# # TypeError: 'str' object does not support item assignment
+
+# # So this creates a new string
+# s += "def"
+# print(s)
+# # result is
+# # abcdef
+
+# # Valid numeric strings can be converted
+# print(int("123") + int("123"))
+# # result is
+# # 246
+
+# # And numbers can be converted to strings
+# print(str(123) + str(123))
+# # result is
+# # 123123
+
+# # In rare cases you may need the ASCII value of a char
+# print(ord("a"))
+# print(ord("b"))
+# # result is
+# # 97
+# # 98
+
+# # Combine a list of strings (with an empty string delimitor)
+# strings = ["ab", "cd", "ef"]
+# print("".join(strings))
+# # result is
+# # abcdef

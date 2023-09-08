@@ -188,7 +188,6 @@
 # # result is
 # # 1 2000000000000
 
-
 # # Python numbers are infinite so they never overflow
 # import math
 # print(math.pow(2, 200))
@@ -368,6 +367,7 @@
 # # This won't work
 # # arr = [[0] * 4] * 4
 
+
 # # # # # # # # # #
 # STRINGS
 # # # # # # # # # #
@@ -413,6 +413,7 @@
 # # result is
 # # abcdef
 
+
 # # # # # # # # # #
 # QUEUES
 # # # # # # # # # #
@@ -441,6 +442,7 @@
 # print(queue)
 # # result is
 # # deque([1])
+
 
 # # # # # # # # # #
 # HASHSETS
@@ -480,3 +482,61 @@
 # print(mySet)
 # # result is
 # # {0, 1, 2, 3, 4}
+
+
+# # # # # # # # # #
+# HASHMAPS
+# # # # # # # # # #
+
+# # HashMap (aka dict)
+# myMap = {}
+# myMap["alice"] = 88
+# myMap["bob"] = 77
+# print(myMap)
+# print(len(myMap))
+# # result is
+# # {'alice': 88, 'bob': 77}
+# # 2
+
+# myMap["alice"] = 80
+# print(myMap["alice"])
+# # result is
+# # 80
+
+# print("alice" in myMap)
+# myMap.pop("alice")
+# print("alice" in myMap)
+# # result is
+# # True
+# # False
+
+# myMap = { "alice": 90, "bob": 70 }
+# print(myMap)
+# # result is
+# # {'alice': 90, 'bob': 70}
+
+# # Dict comprehension
+# myMap = { i: 2*i for i in range(3) }
+# print(myMap)
+# # result is
+# # {0: 0, 1: 2, 2: 4}
+
+# # Looping through maps
+# myMap = { "alice": 90, "bob": 70 }
+# for key in myMap:
+#     print(key, myMap[key])
+# # result is
+# # alice 90
+# # bob 70
+
+# for val in myMap.values():
+#     print(val)
+# # result is
+# # 90
+# # 70
+
+# for key, val in myMap.items():
+#     print(key, val)
+# # result is
+# # alice 90
+# # bob 70

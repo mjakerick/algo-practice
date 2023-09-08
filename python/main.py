@@ -441,3 +441,42 @@
 # print(queue)
 # # result is
 # # deque([1])
+
+# # # # # # # # # #
+# HASHSETS
+# # # # # # # # # #
+
+# # HashSet
+# mySet = set()
+
+# mySet.add(1)
+# mySet.add(2)
+# print(mySet)
+# print(len(mySet))
+# # result is
+# # {1, 2}
+# # 2
+
+# print(1 in mySet)
+# print(2 in mySet)
+# print(3 in mySet)
+# # result is
+# # True
+# # True
+# # False
+
+# mySet.remove(2)
+# print(2 in mySet)
+# # result is
+# # False
+
+# # list to set
+# print(set([1, 2, 3]))
+# # result is
+# # {1, 2, 3}
+
+# # Set comprehension
+# mySet = { i for i in range(5) }
+# print(mySet)
+# # result is
+# # {0, 1, 2, 3, 4}

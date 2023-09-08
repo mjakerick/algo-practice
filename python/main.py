@@ -540,3 +540,42 @@
 # # result is
 # # alice 90
 # # bob 70
+
+
+# # # # # # # # # #
+# TUPLES
+# # # # # # # # # #
+
+# # Tuples are like arrays but immutable
+# tup = (1, 2, 3)
+# print(tup)
+# print(tup[0])
+# print(tup[-1])
+# # result is
+# # (1, 2, 3)
+# # 1
+# # 3
+
+# # Can't modify
+# tup[0] = 0
+# print(tup[0])
+# # result is
+# # TypeError: 'tuple' object does not support item assignment
+
+# # Can be used as key for hash map/set
+# myMap = { (1,2): 3 }
+# print(myMap[(1,2)])
+# # result is
+# # 3
+
+# mySet = set()
+# mySet.add((1, 2))
+# print((1, 2) in mySet)
+# # result is
+# # True
+
+# # Lists can't be keys
+# myMap[[3, 4]] = 5
+# print(myMap[[3, 4]])
+# # result is
+# # TypeError: unhashable type: 'list'

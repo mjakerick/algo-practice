@@ -1,5 +1,26 @@
+from typing import List
+import collections
+import itertools
+import functools
+import math
+import string
+import random
+import bisect
+import re
+import operator
+import heapq
+import queue
+
+from queue import PriorityQueue
+from itertools import combinations, permutations
+from functools import lru_cache
+from collections import defaultdict
+from collections import OrderedDict
+from collections import deque
+from collections import Counter
+
 # # # # # # # # # #
-# TWO SUM
+# 1. TWO SUM
 # # # # # # # # # #
 
 # # Brute Force : Nested For Loops
@@ -51,3 +72,27 @@
 
 # #     Input: nums = [3,3], target = 6
 # #     Output: [0,1]
+
+
+# # # # # # # # # #
+# 121. Best Time to Buy and Sell Stock
+# # # # # # # # # #
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        l, r = 0, 1 # left = buy, right = sell
+        maxP = 0
+
+        while r < len(prices):
+            # profitable?
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]
+                maxP = max(maxP, profit)
+            else:
+                l = r
+            r += 1
+
+        return maxP
+    
+print(Solution().maxProfit(prices=[7,1,5,3,6,4]))
+print(Solution().maxProfit(prices=[7,6,4,3,1]))

@@ -261,6 +261,9 @@ from collections import Counter
 # print(Solution().maxSubArray(nums = [1]))
 # print(Solution().maxSubArray(nums = [5,4,-1,7,8]))
 
+# Time : O(n)
+# Memory : O(1)
+
 # Example 1:
 
 #     Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
@@ -278,3 +281,42 @@ from collections import Counter
 #     Input: nums = [5,4,-1,7,8]
 #     Output: 23
 #     Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+
+
+# # # # # # # # # #
+# 152. Maximum Product Subarray - 6/75
+# # # # # # # # # #
+
+# class Solution:
+#     def maxProduct(self, nums: List[int]) -> int:
+#         res = max(nums)
+#         curMin, curMax = 1, 1
+
+#         for n in nums:
+#             if n == 0:
+#                 curMin, curMax = 1, 1
+#                 continue
+            
+#             tmp = curMax * n
+#             curMax = max(n * curMax, n * curMin, n)
+#             curMin = min(tmp, n * curMin, n)
+#             res = max(res, curMax, curMin)
+#         return res
+
+# print(Solution().maxProduct(nums = [2,3,-2,4]))
+# print(Solution().maxProduct(nums = [-2,0,-1]))
+
+# Time : O(n)
+# Memory : O(1)
+
+# Example 1:
+
+#     Input: nums = [2,3,-2,4]
+#     Output: 6
+#     Explanation: [2,3] has the largest product 6.
+
+# Example 2:
+
+#     Input: nums = [-2,0,-1]
+#     Output: 0
+#     Explanation: The result cannot be 2, because [-2,-1] is not a subarray.

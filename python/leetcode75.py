@@ -245,21 +245,21 @@ from collections import Counter
 # 53. Maximum Subarray - 5/75
 # # # # # # # # # #
 
-class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        maxSub = nums[0]
-        curSum = 0
+# class Solution:
+#     def maxSubArray(self, nums: List[int]) -> int:
+#         maxSub = nums[0]
+#         curSum = 0
 
-        for n in nums:
-            if curSum < 0:
-                curSum = 0
-            curSum += n
-            maxSub = max(maxSub, curSum)
-        return maxSub
+#         for n in nums:
+#             if curSum < 0:
+#                 curSum = 0
+#             curSum += n
+#             maxSub = max(maxSub, curSum)
+#         return maxSub
 
-print(Solution().maxSubArray(nums = [-2,1,-3,4,-1,2,1,-5,4]))
-print(Solution().maxSubArray(nums = [1]))
-print(Solution().maxSubArray(nums = [5,4,-1,7,8]))
+# print(Solution().maxSubArray(nums = [-2,1,-3,4,-1,2,1,-5,4]))
+# print(Solution().maxSubArray(nums = [1]))
+# print(Solution().maxSubArray(nums = [5,4,-1,7,8]))
 
 # Example 1:
 

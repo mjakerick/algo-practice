@@ -368,3 +368,51 @@ from collections import Counter
 #     Input: nums = [11,13,15,17]
 #     Output: 11
 #     Explanation: The original array was [11,13,15,17] and it was rotated 4 times. 
+
+
+# # # # # # # # # #
+# 33. Search in Rotated Sorted Array - 8/75
+# # # # # # # # # #
+
+# class Solution:
+#     def search(self, nums: List[int], target: int) -> int:
+#         l, r = 0, len(nums) - 1
+
+#         while l <= r:
+#             mid = (l + r) // 2
+#             if target == nums[mid]:
+#                 return mid
+            
+#             # left sorted portion
+#             if nums[l] <= nums[mid]:
+#                 if target > nums[mid] or target < nums[l]:
+#                     l = mid + 1
+#                 else:
+#                     r = mid - 1
+
+#             # right sorted portion
+#             else:
+#                 if target < nums[mid] or target > nums[r]:
+#                     r = mid - 1
+#                 else:
+#                     l = mid + 1
+#         return -1
+
+# print(Solution().search(nums = [4,5,6,7,0,1,2], target = 0))
+# print(Solution().search(nums = [4,5,6,7,0,1,2], target = 3))
+# print(Solution().search(nums = [1], target = 0))
+
+# Example 1:
+
+#     Input: nums = [4,5,6,7,0,1,2], target = 0
+#     Output: 4
+
+# Example 2:
+
+#     Input: nums = [4,5,6,7,0,1,2], target = 3
+#     Output: -1
+
+# Example 3:
+
+#     Input: nums = [1], target = 0
+#     Output: -1

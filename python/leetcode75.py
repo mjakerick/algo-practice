@@ -517,3 +517,40 @@ from collections import Counter
 
 #     Input: height = [1,1]
 #     Output: 1
+
+
+# # # # # # # # # #
+# 371. Sum of Two Integers - 11/75
+# # # # # # # # # #
+
+# class Solution:
+#     def getSum(self, a: int, b: int) -> int:
+
+#         bitShortener = 0xffffffff
+
+#         while (b & bitShortener) > 0:
+#             tmp = (a & b) << 1
+#             a = (a ^ b)
+#             b = tmp
+            
+#         return (a & bitShortener) if b > 0 else a
+        
+
+# print(Solution().getSum(a = 1, b = 2))
+# print(Solution().getSum(a = 2, b = 3))
+# print(Solution().getSum(a = -1, b = 1))
+
+# Example 1:
+
+#         Input: a = 1, b = 2
+#         Output: 3
+
+# Example 2:
+
+#         Input: a = 2, b = 3
+#         Output: 5
+
+# Example 3:
+
+#         Input: a = -1, b = 1
+#         Output: 0

@@ -568,9 +568,9 @@ class Solution:
             res += 1
         return res
 
-print(Solution().hammingWeight(n = 00000000000000000000000000001011))
-print(Solution().hammingWeight(n = 00000000000000000000000010000000))
-print(Solution().hammingWeight(n = 11111111111111111111111111111101))
+print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
+print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
+print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
 
 # Example 1:
 

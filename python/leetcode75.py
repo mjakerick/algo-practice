@@ -560,17 +560,17 @@ from collections import Counter
 # 191. Number of 1 Bits - 12/75
 # # # # # # # # # #
 
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        res = 0
-        while n:
-            n &= (n - 1)
-            res += 1
-        return res
+# class Solution:
+#     def hammingWeight(self, n: int) -> int:
+#         res = 0
+#         while n:
+#             n &= (n - 1)
+#             res += 1
+#         return res
 
-print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
-print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
-print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
+# print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
+# print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
+# print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
 
 # Example 1:
 
@@ -590,3 +590,7 @@ print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
 #         Output: 31
 #         Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
         
+
+# # # # # # # # # #
+#  - 13/75
+# # # # # # # # # #

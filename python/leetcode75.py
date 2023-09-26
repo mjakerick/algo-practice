@@ -594,3 +594,32 @@ from collections import Counter
 # # # # # # # # # #
 # 338. Counting Bits - 13/75
 # # # # # # # # # #
+
+class Solution:
+    def countBits(self, n: int) -> List[int]:
+        
+
+# print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
+# print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
+# print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
+
+# Example 1:
+
+#     Input: n = 2
+#     Output: [0,1,1]
+#     Explanation:
+#     0 --> 0
+#     1 --> 1
+#     2 --> 10
+
+# Example 2:
+
+#     Input: n = 5
+#     Output: [0,1,1,2,1,2]
+#     Explanation:
+#     0 --> 0
+#     1 --> 1
+#     2 --> 10
+#     3 --> 11
+#     4 --> 100
+#     5 --> 101

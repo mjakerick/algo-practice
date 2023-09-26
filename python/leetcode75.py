@@ -597,11 +597,18 @@ from collections import Counter
 
 class Solution:
     def countBits(self, n: int) -> List[int]:
-        
+        dp = [0] * (n + 1)
+        offset = 1
 
-# print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
-# print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
-# print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
+        for i in range(1, n + 1):
+            if offset * 2 == i:
+                offset = i
+            dp[i] = 1 + dp[i - offset]
+
+        return dp
+
+print(Solution().countBits(n = 2))
+print(Solution().countBits(n = 5))
 
 # Example 1:
 

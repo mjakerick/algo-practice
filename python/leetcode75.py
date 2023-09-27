@@ -595,20 +595,20 @@ from collections import Counter
 # 338. Counting Bits - 13/75
 # # # # # # # # # #
 
-class Solution:
-    def countBits(self, n: int) -> List[int]:
-        dp = [0] * (n + 1)
-        offset = 1
+# class Solution:
+#     def countBits(self, n: int) -> List[int]:
+#         dp = [0] * (n + 1)
+#         offset = 1
 
-        for i in range(1, n + 1):
-            if offset * 2 == i:
-                offset = i
-            dp[i] = 1 + dp[i - offset]
+#         for i in range(1, n + 1):
+#             if offset * 2 == i:
+#                 offset = i
+#             dp[i] = 1 + dp[i - offset]
 
-        return dp
+#         return dp
 
-print(Solution().countBits(n = 2))
-print(Solution().countBits(n = 5))
+# print(Solution().countBits(n = 2))
+# print(Solution().countBits(n = 5))
 
 # Example 1:
 
@@ -630,3 +630,38 @@ print(Solution().countBits(n = 5))
 #     3 --> 11
 #     4 --> 100
 #     5 --> 101
+
+
+# # # # # # # # # #
+# 268. Missing Number - 14/75
+# # # # # # # # # #
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        res = len(nums)
+
+        for i in range(len(nums)):
+            res += (i - nums[i])
+        return res
+
+print(Solution().missingNumber(nums = [3,0,1]))
+print(Solution().missingNumber(nums = [0,1]))
+print(Solution().missingNumber(nums = [9,6,4,2,3,5,7,0,1]))
+
+# Example 1:
+
+#     Input: nums = [3,0,1]
+#     Output: 2
+#     Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
+
+# Example 2:
+
+#     Input: nums = [0,1]
+#     Output: 2
+#     Explanation: n = 2 since there are 2 numbers, so all numbers are in the range [0,2]. 2 is the missing number in the range since it does not appear in nums.
+
+# Example 3:
+
+#     Input: nums = [9,6,4,2,3,5,7,0,1]
+#     Output: 8
+#     Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.

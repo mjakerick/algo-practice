@@ -568,8 +568,8 @@ from collections import Counter
 #             res += 1
 #         return res
 
-# print(Solution().hammingWeight(n = 0o0000000000000000000000000001011))
-# print(Solution().hammingWeight(n = 0o0000000000000000000000010000000))
+# print(Solution().hammingWeight(n = 0o00000000000000000000000000001011))
+# print(Solution().hammingWeight(n = 0o00000000000000000000000010000000))
 # print(Solution().hammingWeight(n = 0o11111111111111111111111111111101))
 
 # Example 1:
@@ -636,17 +636,17 @@ from collections import Counter
 # 268. Missing Number - 14/75
 # # # # # # # # # #
 
-class Solution:
-    def missingNumber(self, nums: List[int]) -> int:
-        res = len(nums)
+# class Solution:
+#     def missingNumber(self, nums: List[int]) -> int:
+#         res = len(nums)
 
-        for i in range(len(nums)):
-            res += (i - nums[i])
-        return res
+#         for i in range(len(nums)):
+#             res += (i - nums[i])
+#         return res
 
-print(Solution().missingNumber(nums = [3,0,1]))
-print(Solution().missingNumber(nums = [0,1]))
-print(Solution().missingNumber(nums = [9,6,4,2,3,5,7,0,1]))
+# print(Solution().missingNumber(nums = [3,0,1]))
+# print(Solution().missingNumber(nums = [0,1]))
+# print(Solution().missingNumber(nums = [9,6,4,2,3,5,7,0,1]))
 
 # Example 1:
 
@@ -665,3 +665,32 @@ print(Solution().missingNumber(nums = [9,6,4,2,3,5,7,0,1]))
 #     Input: nums = [9,6,4,2,3,5,7,0,1]
 #     Output: 8
 #     Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
+
+
+# # # # # # # # # #
+# 190. Reverse Bits - 15/75
+# # # # # # # # # #
+
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        res = 0
+
+        for i in range(32):
+            bit = (n >> i) & 1
+            res = res | (bit << (31 - i))
+        return res
+
+print(Solution().reverseBits(n = 0b00000010100101000001111010011100))
+print(Solution().reverseBits(n = 0b11111111111111111111111111111101))
+
+# Example 1:
+
+#     Input: n = 00000010100101000001111010011100
+#     Output:    964176192 (00111001011110000010100101000000)
+#     Explanation: The input binary string 00000010100101000001111010011100 represents the unsigned integer 43261596, so return 964176192 which its binary representation is 00111001011110000010100101000000.
+
+# Example 2:
+
+#     Input: n = 11111111111111111111111111111101
+#     Output:   3221225471 (10111111111111111111111111111111)
+#     Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.

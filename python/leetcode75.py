@@ -671,17 +671,17 @@ from collections import Counter
 # 190. Reverse Bits - 15/75
 # # # # # # # # # #
 
-class Solution:
-    def reverseBits(self, n: int) -> int:
-        res = 0
+# class Solution:
+#     def reverseBits(self, n: int) -> int:
+#         res = 0
 
-        for i in range(32):
-            bit = (n >> i) & 1
-            res = res | (bit << (31 - i))
-        return res
+#         for i in range(32):
+#             bit = (n >> i) & 1
+#             res = res | (bit << (31 - i))
+#         return res
 
-print(Solution().reverseBits(n = 0b00000010100101000001111010011100))
-print(Solution().reverseBits(n = 0b11111111111111111111111111111101))
+# print(Solution().reverseBits(n = 0b00000010100101000001111010011100))
+# print(Solution().reverseBits(n = 0b11111111111111111111111111111101))
 
 # Example 1:
 

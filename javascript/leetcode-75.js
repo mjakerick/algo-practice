@@ -285,6 +285,22 @@
 // 12. // 191. Number of 1 Bits
 //////////////////////////////////
 
-var hammingWeight = function(n) {
-    
-};
+// var hammingWeight = function(n) {
+//     let count = 0;
+//     let mask = 1;
+
+//     for (i=0; i<32; i++) {
+//         if ((mask & n) != 0 ) {            
+//             count++;
+//         }
+//         mask <<= 1;
+//     }
+//     return count;
+// };
+
+// console.log(hammingWeight(00000000000000000000000010000000))
+
+
+//////////////////////////////////
+// 13. // 
+//////////////////////////////////

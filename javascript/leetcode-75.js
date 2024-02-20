@@ -318,5 +318,25 @@
 
 
 //////////////////////////////////
-// 14. // 
+// 14. // 268. Missing Number
+//////////////////////////////////
+
+// var missingNumber = function(nums) {
+//     let len = nums.length;
+// 	if(len===0) return 0;
+	
+// 	result = 0;
+// 	for (let i = 0; i < len; i++) {
+// 		result += nums[i] - i;
+// 		console.log(result)
+// 	}
+// 	return len - result;
+// };
+
+// console.log(missingNumber([3,0,1]));
+// console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+
+
+//////////////////////////////////
+// 15. // 
 //////////////////////////////////

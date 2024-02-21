@@ -338,5 +338,31 @@
 
 
 //////////////////////////////////
-// 15. // 
+// 15. // 190. Reverse Bits
+//////////////////////////////////
+
+// var reverseBits = function(n) {
+
+//     let result = 0;
+
+//     for(let i = 0; i < 32; i++) {
+
+//     	let lastBit = n & 1;
+
+//     	let revBit = lastBit << (31 - i);
+
+//     	result = result | revBit;
+
+//     	n = n >>> 1;
+//     }
+
+//     return result >>> 0;
+// };
+
+// console.log(reverseBits(00000010100101000001111010011100))
+// console.log(reverseBits(11111111111111111111111111111101))
+
+
+//////////////////////////////////
+// 16. // 
 //////////////////////////////////

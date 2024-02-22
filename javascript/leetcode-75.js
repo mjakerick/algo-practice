@@ -359,8 +359,8 @@
 //     return result >>> 0;
 // };
 
-// console.log(reverseBits(00000010100101000001111010011100))
-// console.log(reverseBits(11111111111111111111111111111101))
+// console.log(reverseBits(0b10100101000001111010011100))
+// console.log(reverseBits(0b11111111111111111111111111111101))
 
 
 //////////////////////////////////
